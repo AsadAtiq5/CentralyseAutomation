@@ -1,0 +1,42 @@
+{
+  "name": "testcygovtr01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "node scripts/debug-test.js",
+    "test:ui": "playwright test --ui",
+    "test:report": "playwright show-report",
+    "test:sequential": "./scripts/run-tests-sequentially.sh",
+    "regression": "node scripts/run-regression-in-order.js",
+    "regression:parallel": "node scripts/run-parallel-workers.js",
+    "regression:secure": "APP=Secure node scripts/run-parallel-workers.js",
+    "regression:beacher": "APP=Beacher node scripts/run-parallel-workers.js",
+    "regression:participant": "APP=Participant node scripts/run-parallel-workers.js",
+    "regression:sub-entity-leader": "APP=SubEntityLeader node scripts/run-parallel-workers.js",
+    "regression:entity-leader": "APP=EntityLeader node scripts/run-parallel-workers.js",
+    "regression:mssp": "APP=MSSP node scripts/run-parallel-workers.js",
+    "test:login": "npx playwright test tests/Secure/login.spec.js",
+    "test:add-client": "npx playwright test tests/Secure/addClient.spec.js",
+    "test:sub-entity": "npx playwright test tests/Secure/addMultiEntity.spec.js",
+    "allure:generate": "npx allure generate ./allure-results --output ./allure-report",
+    "allure:open": "npx allure serve ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "allure": "^3.9.0",
+    "allure-playwright": "^3.9.0",
+    "dotenv": "^17.2.3",
+    "playwright": "^1.56.1",
+    "xlsx": "^0.18.5"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.936.0",
+    "csv-parse": "^6.1.0"
+  }
+}
