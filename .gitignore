@@ -1,0 +1,48 @@
+node_modules/
+testData/
+.DS_Store
+**/.DS_Store
+/test-results/
+/playwright-report/
+/playwright/.cache/
+.playwright-mcp/
+.vscode/
+.claude/
+allure-report/
+allure-results/
+
+# compiled output
+/dist
+/tmp
+/out-tsc
+.history
+
+.env
+.env.local
+.env.*.local
+screenshots/
+*.log
+storageState.json
+storageState.beacher.json
+storageState.participant.json
+storageState.subEntityLeader.json
+storageState.entityLeader.json
+storageState.mssp.json
+test-data.json
+debug.spec.js
+test.js
+
+# Local Copilot custom agents and skills (not shared)
+.github/agents/
+.github/skills/
+
+# Parallel workers plan (local only)
+PARALLEL_WORKERS_PLAN.md
+parallel-results/
+TEST_SUMMARY.md
+
+# Local project context docs, agent instructions and MCP server config (not shared)
+docs/
+test-cases/
+CLAUDE.md
+.mcp.json
